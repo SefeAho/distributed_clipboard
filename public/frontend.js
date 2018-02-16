@@ -27,7 +27,7 @@ clipboard.on('error', function(e) {
 //Listen for events
 socket.on('copied', function(data){
       $('clipboardData').on('click', function () {
-        console.log(data.copy); 
+        console.log(data.copy);
         var text = data.copy;
         var dummy = document.createElement("textarea");
         document.body.appendChild(dummy);
