@@ -26,8 +26,8 @@ clipboard.on('error', function(e) {
 
 //Listen for events
 socket.on('copied', function(data){
-      $('clipboardData').on('click', function () {
-        console.log(data.copy);
+      console.log(data.copy);
+//      $('clipboardData').on('click', function () {
         var text = data.copy;
         var dummy = document.createElement("textarea");
         document.body.appendChild(dummy);
@@ -35,7 +35,7 @@ socket.on('copied', function(data){
         dummy.select();
         document.execCommand("copy");
         document.body.removeChild(dummy);
-      });
+//      });
 });
 
 $(".paste").click(function() {
