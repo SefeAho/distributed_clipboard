@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>Clipboard with sockets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>Distributed clipboard</h1>
+      <label for="txta1">Textarea</label>
+      <textarea id="txta1" class="materialize-textarea textarea">This text will be copied</textarea>
+
+      <div class="btn copy" data-clipboard-action="copy" data-clipboard-target="#txta1">Copy</div>
+      <div class="btn cut" data-clipboard-action="cut" data-clipboard-target="#txta1">Cut</div>
+
+      <div class="btn red right clipboardData">Get available clipboard data</div>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="./frontend.js"></script>
+
+</html>
